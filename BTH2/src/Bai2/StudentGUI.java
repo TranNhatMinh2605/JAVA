@@ -118,7 +118,7 @@ public class StudentGUI extends javax.swing.JFrame {
         TxtAreaTivi.setRows(5);
         jScrollPane2.setViewportView(TxtAreaTivi);
 
-        btnGoiHon.setText("Gọi Hồn");
+        btnGoiHon.setText("Nạp vào");
         btnGoiHon.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnGoiHonActionPerformed(evt);

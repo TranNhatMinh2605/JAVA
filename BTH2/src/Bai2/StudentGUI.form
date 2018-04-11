@@ -185,7 +185,7 @@
     </Container>
     <Component class="javax.swing.JButton" name="btnGoiHon">
       <Properties>
-        <Property name="text" type="java.lang.String" value="G&#x1ecd;i H&#x1ed3;n"/>
+        <Property name="text" type="java.lang.String" value="N&#x1ea1;p v&#xe0;o"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGoiHonActionPerformed"/>
