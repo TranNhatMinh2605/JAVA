@@ -46,6 +46,7 @@ public class StudentGUI extends javax.swing.JFrame {
         btnGoiHon = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("StudentGUI");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 51, 204)));
 
