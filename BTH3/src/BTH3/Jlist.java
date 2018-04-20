@@ -170,11 +170,11 @@ public class Jlist extends javax.swing.JFrame {
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
         // TODO add your handling code here:
-        String sTheThao = JOptionPane.showInputDialog("Nhập tên môn thể thao: ");
-        ListTrai.addElement(sTheThao);
+       String sTheThao = JOptionPane.showInputDialog("Nhập tên môn thể thao: ");
+       ListTrai.addElement(sTheThao);
 //        ListModel mTrai = listSports.getModel();
-//
-//        ArrayList<String> listTrai = new ArrayList<>();
+
+//        List<String> listTrai = new ArrayList<>();
 //        for (int i = 0; i < mTrai.getSize(); i++) {
 //            listTrai.add(mTrai.getElementAt(i).toString());
 //        }
@@ -182,6 +182,11 @@ public class Jlist extends javax.swing.JFrame {
 //        //Chuyển sang kiểu mảng để đưa vào JList
 //        String[] arData = listTrai.toArray(new String[0]);
 //        listSports.setListData(arData);
+
+       btnPickAll.setEnabled(true);
+       btnPick.setEnabled(true);
+       btnDel.setEnabled(true);
+       btnDelAll.setEnabled(true);
     }//GEN-LAST:event_btnAddActionPerformed
 
     private void btnPickAllActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPickAllActionPerformed
@@ -191,6 +196,11 @@ public class Jlist extends javax.swing.JFrame {
             ListPhai.addElement(ListTrai.get(i));
         }
             ListTrai.clear();
+            
+            btnPickAll.setEnabled(false);
+            btnPick.setEnabled(false);
+            btnDel.setEnabled(true);
+            btnDelAll.setEnabled(true);
     }//GEN-LAST:event_btnPickAllActionPerformed
 
     private void btnDelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDelActionPerformed
@@ -209,6 +219,10 @@ public class Jlist extends javax.swing.JFrame {
            ListTrai.addElement(ListPhai.get(i));
        }
        ListPhai.clear();
+       btnPickAll.setEnabled(true);
+       btnPick.setEnabled(true);
+       btnDel.setEnabled(false);
+       btnDelAll.setEnabled(false);
     }//GEN-LAST:event_btnDelAllActionPerformed
 
     /**
