@@ -5,6 +5,8 @@
  */
 package GUI;
 
+import BLL.FormChatLieu;
+
 /**
  *
  * @author NhatMinh
@@ -27,107 +29,147 @@ public class QLBH extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        mnuFile = new javax.swing.JTabbedPane();
-        jLayeredPane1 = new javax.swing.JLayeredPane();
-        jLayeredPane2 = new javax.swing.JLayeredPane();
-        jLayeredPane3 = new javax.swing.JLayeredPane();
-        jLayeredPane4 = new javax.swing.JLayeredPane();
-        jLayeredPane5 = new javax.swing.JLayeredPane();
-        jLayeredPane6 = new javax.swing.JLayeredPane();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        Taptin = new javax.swing.JMenu();
+        Exit = new javax.swing.JMenuItem();
+        Danhmuc = new javax.swing.JMenu();
+        ChatLieu = new javax.swing.JMenuItem();
+        NhanVien = new javax.swing.JMenuItem();
+        KhachHang = new javax.swing.JMenuItem();
+        HangHoa = new javax.swing.JMenuItem();
+        HoaDon = new javax.swing.JMenu();
+        HoaDonBan = new javax.swing.JMenuItem();
+        TimKiem = new javax.swing.JMenu();
+        TimHoaDon = new javax.swing.JMenuItem();
+        TimHang = new javax.swing.JMenuItem();
+        TimKhachHang = new javax.swing.JMenuItem();
+        BaoCao = new javax.swing.JMenu();
+        HangTon = new javax.swing.JMenuItem();
+        DoanhThu = new javax.swing.JMenuItem();
+        Help = new javax.swing.JMenu();
+        HienHelp = new javax.swing.JMenu();
+        VaiNet = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
-        jLayeredPane1.setLayout(jLayeredPane1Layout);
-        jLayeredPane1Layout.setHorizontalGroup(
-            jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 395, Short.MAX_VALUE)
-        );
-        jLayeredPane1Layout.setVerticalGroup(
-            jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 272, Short.MAX_VALUE)
-        );
+        Taptin.setText("Tập Tin");
 
-        mnuFile.addTab("Tập Tin", jLayeredPane1);
+        Exit.setText("Thoát");
+        Exit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ExitActionPerformed(evt);
+            }
+        });
+        Taptin.add(Exit);
 
-        javax.swing.GroupLayout jLayeredPane2Layout = new javax.swing.GroupLayout(jLayeredPane2);
-        jLayeredPane2.setLayout(jLayeredPane2Layout);
-        jLayeredPane2Layout.setHorizontalGroup(
-            jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 395, Short.MAX_VALUE)
-        );
-        jLayeredPane2Layout.setVerticalGroup(
-            jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 272, Short.MAX_VALUE)
-        );
+        jMenuBar1.add(Taptin);
 
-        mnuFile.addTab("Danh Mục", jLayeredPane2);
+        Danhmuc.setText("Danh Mục");
 
-        javax.swing.GroupLayout jLayeredPane3Layout = new javax.swing.GroupLayout(jLayeredPane3);
-        jLayeredPane3.setLayout(jLayeredPane3Layout);
-        jLayeredPane3Layout.setHorizontalGroup(
-            jLayeredPane3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 395, Short.MAX_VALUE)
-        );
-        jLayeredPane3Layout.setVerticalGroup(
-            jLayeredPane3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 272, Short.MAX_VALUE)
-        );
+        ChatLieu.setText("Chất Liệu");
+        ChatLieu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ChatLieuActionPerformed(evt);
+            }
+        });
+        Danhmuc.add(ChatLieu);
 
-        mnuFile.addTab("Hoá Đơn", jLayeredPane3);
+        NhanVien.setText("Nhân Viên");
+        NhanVien.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NhanVienActionPerformed(evt);
+            }
+        });
+        Danhmuc.add(NhanVien);
 
-        javax.swing.GroupLayout jLayeredPane4Layout = new javax.swing.GroupLayout(jLayeredPane4);
-        jLayeredPane4.setLayout(jLayeredPane4Layout);
-        jLayeredPane4Layout.setHorizontalGroup(
-            jLayeredPane4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 395, Short.MAX_VALUE)
-        );
-        jLayeredPane4Layout.setVerticalGroup(
-            jLayeredPane4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 272, Short.MAX_VALUE)
-        );
+        KhachHang.setText("Khách Hàng");
+        Danhmuc.add(KhachHang);
 
-        mnuFile.addTab("Tìm Kiếm", jLayeredPane4);
+        HangHoa.setText("Hàng Hoá");
+        HangHoa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HangHoaActionPerformed(evt);
+            }
+        });
+        Danhmuc.add(HangHoa);
 
-        javax.swing.GroupLayout jLayeredPane5Layout = new javax.swing.GroupLayout(jLayeredPane5);
-        jLayeredPane5.setLayout(jLayeredPane5Layout);
-        jLayeredPane5Layout.setHorizontalGroup(
-            jLayeredPane5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 395, Short.MAX_VALUE)
-        );
-        jLayeredPane5Layout.setVerticalGroup(
-            jLayeredPane5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 272, Short.MAX_VALUE)
-        );
+        jMenuBar1.add(Danhmuc);
 
-        mnuFile.addTab("Báo Cáo", jLayeredPane5);
+        HoaDon.setText("Hoá Đơn");
 
-        javax.swing.GroupLayout jLayeredPane6Layout = new javax.swing.GroupLayout(jLayeredPane6);
-        jLayeredPane6.setLayout(jLayeredPane6Layout);
-        jLayeredPane6Layout.setHorizontalGroup(
-            jLayeredPane6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 395, Short.MAX_VALUE)
-        );
-        jLayeredPane6Layout.setVerticalGroup(
-            jLayeredPane6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 272, Short.MAX_VALUE)
-        );
+        HoaDonBan.setText("Hoá Đơn Bán");
+        HoaDon.add(HoaDonBan);
 
-        mnuFile.addTab("Trợ Giúp", jLayeredPane6);
+        jMenuBar1.add(HoaDon);
+
+        TimKiem.setText("Tìm Kiếm");
+
+        TimHoaDon.setText("Tìm Hoá Đơn");
+        TimKiem.add(TimHoaDon);
+
+        TimHang.setText("Tìm Hàng");
+        TimKiem.add(TimHang);
+
+        TimKhachHang.setText("Tìm Khách Hàng");
+        TimKiem.add(TimKhachHang);
+
+        jMenuBar1.add(TimKiem);
+
+        BaoCao.setText("Báo Cáo");
+
+        HangTon.setText("Hàng Tồn");
+        BaoCao.add(HangTon);
+
+        DoanhThu.setText("Doanh Thu");
+        BaoCao.add(DoanhThu);
+
+        jMenuBar1.add(BaoCao);
+
+        Help.setText("Trợ Giúp");
+
+        HienHelp.setText("Hiện Trợ Giúp");
+        Help.add(HienHelp);
+
+        VaiNet.setText("Vài Nét");
+        Help.add(VaiNet);
+
+        jMenuBar1.add(Help);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(mnuFile)
+            .addGap(0, 400, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(mnuFile)
+            .addGap(0, 279, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void NhanVienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NhanVienActionPerformed
+        // TODO add your handling code here:
+        new GUINhanVien().setVisible(true);
+    }//GEN-LAST:event_NhanVienActionPerformed
+
+    private void ExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_ExitActionPerformed
+
+    private void ChatLieuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChatLieuActionPerformed
+        // TODO add your handling code here:
+        new GUIChatLieu().setVisible(true);
+    }//GEN-LAST:event_ChatLieuActionPerformed
+
+    private void HangHoaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HangHoaActionPerformed
+        // TODO add your handling code here:       
+        new GUIHangHoa().setVisible(true);
+    }//GEN-LAST:event_HangHoaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -165,12 +207,25 @@ public class QLBH extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLayeredPane jLayeredPane1;
-    private javax.swing.JLayeredPane jLayeredPane2;
-    private javax.swing.JLayeredPane jLayeredPane3;
-    private javax.swing.JLayeredPane jLayeredPane4;
-    private javax.swing.JLayeredPane jLayeredPane5;
-    private javax.swing.JLayeredPane jLayeredPane6;
-    private javax.swing.JTabbedPane mnuFile;
+    private javax.swing.JMenu BaoCao;
+    private javax.swing.JMenuItem ChatLieu;
+    private javax.swing.JMenu Danhmuc;
+    private javax.swing.JMenuItem DoanhThu;
+    private javax.swing.JMenuItem Exit;
+    private javax.swing.JMenuItem HangHoa;
+    private javax.swing.JMenuItem HangTon;
+    private javax.swing.JMenu Help;
+    private javax.swing.JMenu HienHelp;
+    private javax.swing.JMenu HoaDon;
+    private javax.swing.JMenuItem HoaDonBan;
+    private javax.swing.JMenuItem KhachHang;
+    private javax.swing.JMenuItem NhanVien;
+    private javax.swing.JMenu Taptin;
+    private javax.swing.JMenuItem TimHang;
+    private javax.swing.JMenuItem TimHoaDon;
+    private javax.swing.JMenuItem TimKhachHang;
+    private javax.swing.JMenu TimKiem;
+    private javax.swing.JMenuItem VaiNet;
+    private javax.swing.JMenuBar jMenuBar1;
     // End of variables declaration//GEN-END:variables
 }
