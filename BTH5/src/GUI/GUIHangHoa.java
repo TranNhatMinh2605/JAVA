@@ -20,6 +20,7 @@ public class GUIHangHoa extends javax.swing.JFrame {
     public GUIHangHoa() {
         initComponents();
         Screen.setModel(FormHangHoa.HangModel());
+        this.setLocationRelativeTo(null);
     }
 
     /**

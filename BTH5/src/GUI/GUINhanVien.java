@@ -20,6 +20,7 @@ public class GUINhanVien extends javax.swing.JFrame {
     public GUINhanVien() {
         initComponents();
         screen.setModel(FormNhanVien.NhanVienModel());
+        this.setLocationRelativeTo(null);
     }
 
     /**

@@ -18,6 +18,7 @@ public class QLBH extends javax.swing.JFrame {
      */
     public QLBH() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -83,6 +84,11 @@ public class QLBH extends javax.swing.JFrame {
         Danhmuc.add(NhanVien);
 
         KhachHang.setText("Khách Hàng");
+        KhachHang.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                KhachHangActionPerformed(evt);
+            }
+        });
         Danhmuc.add(KhachHang);
 
         HangHoa.setText("Hàng Hoá");
@@ -153,6 +159,8 @@ public class QLBH extends javax.swing.JFrame {
 
     private void NhanVienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NhanVienActionPerformed
         // TODO add your handling code here:
+        setVisible(false);
+        dispose();
         new GUINhanVien().setVisible(true);
     }//GEN-LAST:event_NhanVienActionPerformed
 
@@ -163,13 +171,24 @@ public class QLBH extends javax.swing.JFrame {
 
     private void ChatLieuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChatLieuActionPerformed
         // TODO add your handling code here:
+        setVisible(false);
+        dispose();
         new GUIChatLieu().setVisible(true);
     }//GEN-LAST:event_ChatLieuActionPerformed
 
     private void HangHoaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HangHoaActionPerformed
-        // TODO add your handling code here:       
+        // TODO add your handling code here:   
+        setVisible(false);
+        dispose();
         new GUIHangHoa().setVisible(true);
     }//GEN-LAST:event_HangHoaActionPerformed
+
+    private void KhachHangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KhachHangActionPerformed
+        // TODO add your handling code here:
+        setVisible(false);
+        dispose();
+        new GUIKhachHang().setVisible(true);
+    }//GEN-LAST:event_KhachHangActionPerformed
 
     /**
      * @param args the command line arguments

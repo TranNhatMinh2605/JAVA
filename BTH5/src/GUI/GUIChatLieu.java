@@ -19,6 +19,7 @@ public class GUIChatLieu extends javax.swing.JFrame {
     public GUIChatLieu() {
         initComponents();
         Screen.setModel(FormChatLieu.ChatLieuModel());
+        this.setLocationRelativeTo(null);
     }
 
     /**
